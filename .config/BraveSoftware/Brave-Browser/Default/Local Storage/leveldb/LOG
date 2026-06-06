@@ -1,6 +1,0 @@
-2026/06/02-15:17:28.158 5 Reusing MANIFEST /home/cirno/.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/MANIFEST-000001
-2026/06/02-15:17:28.163 5 Recovering log #3
-2026/06/02-15:17:28.163 5 Reusing old log /home/cirno/.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/000003.log 
-2026/06/02-15:25:29.245 5 Level-0 table #5: started
-2026/06/02-15:25:29.261 5 Level-0 table #5: 102785 bytes OK
-2026/06/02-15:25:29.273 5 Delete type=0 #3
