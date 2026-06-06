@@ -1,9 +1,5 @@
-# ~/.zshrc
-# Converted from fish shell config (cirno)
-# Source: ~/.config/fish/config.fish + fish_variables + fish_prompt.fish
-
 # =============================================================
-# PATH  (from fish_variables: fish_user_paths)
+# PATH
 # =============================================================
 export PATH="$HOME/.local/bin:$PATH"
 export DISCORDO_TOKEN="MTAxNTYxMTIxMzIxMzg1OTg2MA.GIzNF3.7yJLk0is8nlWZ_fU4jf2DoXIqEvbPJYrKJe6Ak" discordo
@@ -21,10 +17,10 @@ setopt SHARE_HISTORY         # share history across all open terminals
 setopt APPEND_HISTORY        # append rather than overwrite
 
 # =============================================================
-# VI MODE  (from fish_variables: fish_key_bindings = fish_vi_key_bindings)
+# VI MODE
 # =============================================================
 bindkey -v
-KEYTIMEOUT=10
+KEYTIMEOUT=1
 
 # Block cursor = normal mode, beam cursor = insert mode
 function zle-keymap-select() {
@@ -55,7 +51,7 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 # Accept autosuggestion with right arrow
 bindkey '^[[C' autosuggest-accept
-bindkey '^[OC' autosuggest-accept    # alternate terminal code for right arrow
+bindkey '^[OC' autosuggest-accept
 # =============================================================
 # PLUGINS
 # =============================================================
@@ -77,25 +73,14 @@ alias v='nvim'
 alias cfs='nvim ~/.config/sway/config'
 alias cfl='nvim ~/.config/swaylock/config'
 alias cfw='nvim ~/.config/waybar'
-alias cff='nvim ~/.zshrc'                   # updated: was fish config, now zsh
+alias cff='nvim ~/.zshrc'                   
 alias s='spotify_player'
 alias p='sudo pacman'
 alias y='yay'
 alias sw='~/.local/bin/swallow.sh'
 alias ls='ls -lah --color=auto'
 alias weather="curl 'https://wttr.in/'"
-
-# =============================================================
-# PROMPT  (converted from fish_prompt.fish)
-#
-# Original fish prompt:
-#   [user@host dir]$
-#   red-bold[ + yellow user + green @ + blue host + space + magenta dir + red ] + normal $
-#
-# fish's prompt_pwd shortens intermediate dirs to first letter:
-#   e.g. /home/cirno/.config/fish → ~/.c/fish
-# The _fish_style_pwd function below replicates this.
-# =============================================================
+alias dot='git --git-dir=/home/cirno/.dotfiles/ --work-tree=/home/cirno'
 
 setopt PROMPT_SUBST
 
@@ -120,13 +105,5 @@ _fish_style_pwd() {
     }'
 }
 
-# Prompt: [user@host dir]$
-# %B=bold %b=reset-bold %F{N}=ANSI color by number %f=reset %n=user %m=hostname
-#
-# Bright ANSI numbers (9-15) match fish's set_color rendering:
-#   9=bright red  10=bright green  11=bright yellow
-#   12=bright blue  13=bright magenta  15=bright white
-#
-# Only [ is bold (matches fish: set_color --bold red). ] is plain — fixed.
 PROMPT='%B%F{9}[%f%b%F{11}%n%f%F{10}@%f%F{12}%m%f %F{13}$(_fish_style_pwd)%f%F{9}]%f%F{15}$ %f'
-alias dot='git --git-dir=/home/cirno/.dotfiles/ --work-tree=/home/cirno'
+
