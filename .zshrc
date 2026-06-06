@@ -2,7 +2,6 @@
 # PATH
 # =============================================================
 export PATH="$HOME/.local/bin:$PATH"
-export DISCORDO_TOKEN="MTAxNTYxMTIxMzIxMzg1OTg2MA.GIzNF3.7yJLk0is8nlWZ_fU4jf2DoXIqEvbPJYrKJe6Ak" discordo
 
 # =============================================================
 # HISTORY
