@@ -1,0 +1,30 @@
+* {
+    border-radius: 0 !important;
+    --dt-black: #0f0f0f;
+    --dt-grey-0: #141514;
+    --dt-grey-1: #1e1f1e;
+    --dt-grey-2: #272a28;
+    --dt-grey-3: #3b403c;
+    --dt-grey-4: #585f5b;
+    --dt-grey-5: #6c756f;
+    --dt-grey-6: #888e7b;
+    --dt-grey-7: #9a9c8b;
+    --dt-grey-8: #b6b69a;
+    --dt-grey-9: #d9cbd5;
+    --dt-grey-10: #e3d69c;
+    --dt-white: #f4decd;
+    --dt-red-6: #f16e65;
+    --dt-red-7: #ef968f;
+    --dt-orange-6: #ef934d;
+    --dt-orange-7: #f4d585;
+    --dt-yellow: #efbf71;
+    --dt-green-6: #7ec97e;
+    --dt-green-7: #a4daa4;
+    --dt-cyan-6: #7ec9a3;
+    --dt-cyan-7: #abd4bf;
+    --dt-blue-6: #71b4d6;
+    --dt-blue-8: #b0d4e8;
+    --dt-magenta-7: #e28dc6;
+    --dt-magenta-8: #ebadd6;  
+    box-shadow: none !important;
+}
