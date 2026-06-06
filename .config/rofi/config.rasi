@@ -1,0 +1,185 @@
+configuration {
+    font: "CozetteVector 12";
+
+    timeout {
+        action: "kb-cancel";
+        delay:  0;
+    }
+
+    filebrowser {
+        directories-first: true;
+        sorting-method:    "name";
+    }
+}
+
+* {
+    /* Biscuit Sol Dark */
+    bg0:    #181515;  /* Night       - darkest bg   */
+    bg1:    #221E1E;  /* Raisin Black - alt bg      */
+    bg2:    #423939;  /* Van Dyke    - selection bg  */
+    fg0:    #F4E6D2;  /* Antique White - main fg     */
+    fg1:    #B6A8A5;  /* Silver      - dim fg        */
+    fg2:    #978787;  /* Cinereous   - muted fg      */
+    red:    #CA3F3F;  /* Persian Red                 */
+    orange: #E46A3A;  /* Flame                       */
+    yellow: #E39C45;  /* Butterscotch                */
+    green:  #989F56;  /* Moss Green                  */
+    teal:   #629386;  /* Viridian                    */
+    blue:   #517894;  /* Steel Blue                  */
+
+    foreground:                  @fg0;
+    background:                  @bg0;
+    border-color:                @bg2;
+    separatorcolor:              @bg2;
+
+    normal-foreground:           @fg1;
+    normal-background:           @bg0;
+
+    active-foreground:           @teal;
+    active-background:           @bg0;
+
+    urgent-foreground:           @red;
+    urgent-background:           @bg0;
+
+    selected-normal-foreground:  @fg0;
+    selected-normal-background:  @bg2;
+
+    selected-active-foreground:  @fg0;
+    selected-active-background:  @bg2;
+
+    selected-urgent-foreground:  @fg0;
+    selected-urgent-background:  @red;
+
+    alternate-normal-foreground: @fg1;
+    alternate-normal-background: @bg0;
+
+    alternate-active-foreground: @teal;
+    alternate-active-background: @bg0;
+
+    alternate-urgent-foreground: @red;
+    alternate-urgent-background: @bg0;
+
+    spacing:                     2;
+}
+
+window {
+    width:            25%;
+    background-color: @bg0;
+    border:           0;
+    padding:          0px;
+}
+
+mainbox {
+    border:           0;
+    padding:          0;
+}
+
+message {
+    border:           1px dash 0px 0px;
+    padding:          1px;
+}
+
+textbox {
+    text-color:       @fg0;
+}
+
+listview {
+    fixed-height:     0;
+    border:           0px solid 0px 0px;
+    spacing:          2px;
+    scrollbar:        false;
+    padding:          2px 0px 0px;
+}
+
+element normal.normal {
+    background-color: @bg0;
+    text-color:       @fg1;
+}
+
+element normal.urgent {
+    background-color: @bg0;
+    text-color:       @red;
+}
+
+element normal.active {
+    background-color: @bg0;
+    text-color:       @teal;
+}
+
+element selected.normal {
+    background-color: @bg2;
+    text-color:       @fg0;
+}
+
+element selected.urgent {
+    background-color: @red;
+    text-color:       @fg0;
+}
+
+element selected.active {
+    background-color: @bg2;
+    text-color:       @teal;
+}
+
+element alternate.normal {
+    background-color: @bg0;
+    text-color:       @fg1;
+}
+
+element alternate.urgent {
+    background-color: @bg0;
+    text-color:       @red;
+}
+
+element alternate.active {
+    background-color: @bg0;
+    text-color:       @teal;
+}
+
+element-text {
+    highlight: @yellow;
+}
+
+sidebar {
+    border:           0px dash 0px 0px;
+}
+
+button {
+    spacing:          0;
+    text-color:       @fg1;
+}
+
+button selected {
+    background-color: @bg2;
+    text-color:       @fg0;
+}
+
+inputbar {
+    spacing:          0px;
+    text-color:       @fg0;
+    padding:          1px;
+    children:         [ prompt, textbox-prompt-colon, entry, case-indicator ];
+}
+
+case-indicator {
+    spacing:          0;
+    text-color:       @fg2;
+}
+
+entry {
+    spacing:          0;
+    text-color:       @fg0;
+    cursor-width:     1ch;
+}
+
+prompt {
+    spacing:          0;
+    text-color:       @orange;
+}
+
+textbox-prompt-colon {
+    expand:           false;
+    str:              ":";
+    margin:           0px 0.3em 0px 0px;
+    text-color:       @fg2;
+}

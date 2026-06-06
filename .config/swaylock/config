@@ -1,0 +1,29 @@
+# ~/.config/swaylock/config
+image=~/walls/Misc/wall2.jpg
+clock
+indicator
+indicator-idle-visible
+
+font=CozetteVector
+timestr=%T
+datestr=%a, %d %b
+
+# make it look like a dark translucent box
+indicator-radius=90
+indicator-thickness=4
+inside-color=00000066
+inside-clear-color=00000066
+inside-ver-color=00000066
+text-clear-color=ffffff
+text-ver-color=ffffff
+ring-clear-color=ffffff55
+ring-ver-color=ffffff55
+ring-color=ffffff55
+line-color=00000000
+key-hl-color=ffffffaa
+text-color=ffffff
+
+# blurred/dimmed background
+# effect-blur=8x5
+# effect-vignette=0.20:0.80
+color=00000055

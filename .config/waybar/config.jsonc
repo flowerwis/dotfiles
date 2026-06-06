@@ -1,0 +1,94 @@
+{
+  "layer": "top",
+  "position": "top",
+  "reload_style_on_change": true,
+  "height": 34,
+  "spacing": 0,
+  "margin-top": 3,
+  "margin-left": 3,
+  "margin-right": 3,
+  "margin-bottom": 0,
+  "modules-left": [
+    "custom/playerctl",
+    "disk#root",
+    "disk#home",
+    "battery"
+  ],
+  "modules-center": [],
+  "modules-right": [
+    "clock",
+    "custom/power"
+  ],
+"custom/playerctl": {
+    "format": " {}",
+    "return-type": "json",
+    "exec": "playerctl -p spotify_player metadata --format '{\"text\":\"{{artist}} - {{title}}\"}'",
+    "max-length": 25,
+    "on-click": "playerctl -p spotify_player play-pause",
+    "on-click-right": "playerctl -p spotify_player next",
+    "interval": 1
+},
+  "disk#root": {
+    "path": "/",
+    "interval": 30,
+    "format": "<span color='#ff6e7a'>/</span>: {percentage_used}%",
+    "tooltip": false
+  },
+  "disk#home": {
+    "path": "/home",
+    "interval": 30,
+    "format": "<span color='#ff6e7a'>/home</span>: {percentage_used}%",
+    "tooltip": false
+  },
+  "battery": {
+    "states": {
+        "warning":   20,
+        "critical":  15
+    },
+    "format":          "<span color='#555555'></span> {capacity}%",
+    "format-charging": "<span color='#555555'>↑</span> {capacity}%",
+    "format-full":     "<span color='#555555'></span> {capacity}%",
+    "format-plugged":  "<span color='#555555'></span> {capacity}%",
+    "interval": 5,
+    "format-icons": [
+          "󰂎",
+          "󰁺",
+          "󰁻",
+          "󰁼",
+          "󰁽",
+          "󰁾",
+          "󰁿",
+          "󰂀",
+          "󰂁",
+          "󰂂",
+          "󰁹"
+    ]
+  },
+  "clock": {
+    "format": " {:%H:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#d3c6aa'><b>{}</b></span>",
+        "days": "<span color='#e67e80'>{}</span>",
+        "weeks": "<span color='#a7c080'><b>W{}</b></span>",
+        "weekdays": "<span color='#7fbbb3'><b>{}</b></span>",
+        "today": "<span color='#dbbc7f'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+  "custom/power": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "swaynag -t warning -m 'Power off?' -B 'Yes' 'loginctl poweroff'"
+  }
+}
