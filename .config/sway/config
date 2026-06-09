@@ -43,13 +43,13 @@ input type:touchpad {
        middle_emulation enabled
        drag_lock disabled
        accel_profile flat
-       pointer_accel 0
+       pointer_accel 0.3
        # events disabled
 }
 
 input type:pointer {
       accel_profile flat
-      pointer_accel 0
+      pointer_accel 0.3
 }
 
 input type:keyboard {
