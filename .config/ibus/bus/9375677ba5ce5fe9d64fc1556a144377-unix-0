@@ -1,3 +1,3 @@
-IBUS_ADDRESS=
-IBUS_DAEMON_PID=
+IBUS_ADDRESS=unix:path=/tmp/dbus-j0rtCWIyqs,guid=4291e36dc80b194fd3560db36a27f6e6,fcitx_random_string=3bc092424cc54a569965b2ca280c653f
+IBUS_DAEMON_PID=3506
 

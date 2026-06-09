@@ -1,6 +1,6 @@
 ### Autostart
 exec_always --no-startup-id dunst &
-# exec --no-startup-id fcitx5 -d
+exec --no-startup-id fcitx5 -d
 # Artix moment
 exec dbus-update-activation-environment \
     WAYLAND_DISPLAY \
@@ -42,6 +42,8 @@ input type:touchpad {
        natural_scroll enabled
        middle_emulation enabled
        drag_lock disabled
+       accel_profile flat
+       pointer_accel 0
        # events disabled
 }
 
