@@ -25,6 +25,7 @@
     "exec": "playerctl -p spotify_player metadata --format '{\"text\":\"{{artist}} - {{title}}\"}'",
     "max-length": 25,
     "on-click": "playerctl -p spotify_player play-pause",
+    "on-click-middle": "playerctl -p spotify_player previous",
     "on-click-right": "playerctl -p spotify_player next",
     "interval": 1
 },

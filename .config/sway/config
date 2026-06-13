@@ -19,12 +19,13 @@ set $term foot
 # set $menu tofi-drun --drun-launch=true
 # set $menu foot --window-size-pixels=540x620 -T float fsel -d
 # set $menu wmenu-run -l 10 -f 'Iosevka Nerd Font Mono 11'
-set $menu exec rofi -modes "window,drun" -show combi --window-title "run"
+# set $menu exec rofi -modes "window,run,drun" -show combi --window-title "run"
+set $menu exec rofi -show drun
 
 ### Output cotfiguration
 # Depends but whatever
 output HDMI-A-2 mode 1920x1080@120hz pos 1920 0 scale 1
-output * bg ~/walls/Art/art_92.png fill
+output * bg ~/walls/Misc/gwq7re.png fill
 output * allow_tearing yes
 output * max_render_time off
 
@@ -183,7 +184,7 @@ for_window [window_type="dialog"] floating enable
 for_window [window_role="dialog"] floating enable
 # Floating apps
 for_window [title="float"] floating enable
-for_window [title="superdupermedia"] floating enable, resize set 720 560, move position 1180 15
+for_window [title="superdupermedia"] floating enable, resize set 720 560, move position 15 15
 for_window [app_id="waypaper"] floating enable
 for_window [app_id="thunar"] floating enable
 for_window [app_id="nwg-displays"] floating enable
@@ -191,5 +192,6 @@ for_window [app_id="nwg-look"] floating enable
 for_window [class="steam"] floating enable, resize set 1600 900
 for_window [app_id="Zoom" title="zoom_linux_float_video_window"] move scratchpad
 for_window [app_id="Zoom"] floating enable, resize set 1600 900
+# for_window [app_id="org.vinegarhq.Sober"] floating enable, resize set 960 720
 
 include /etc/sway/config.d/*
